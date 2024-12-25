@@ -5,9 +5,10 @@ interface IProps {
     todo: string;
     setTodo: React.Dispatch<React.SetStateAction<string>>;
     handleAdd: (e: React.FormEvent) => void;
+    setIsUrgent: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const InputField = ({ todo, setTodo, handleAdd }:IProps) => {
+const InputField = ({ todo, setTodo, handleAdd , setIsUrgent}:IProps) => {
 
     return (
         <form
@@ -23,6 +24,15 @@ const InputField = ({ todo, setTodo, handleAdd }:IProps) => {
                 onChange={(e) => setTodo(e.target.value)}
                 className="input__box"
             />
+            <div className="input__urgent">
+                <label>
+                    <input
+                        type="checkbox"
+                        onChange={(e) => setIsUrgent(e.target.checked)}
+                    />
+                    Is Urgent
+                </label>
+            </div>
             <button type="submit" className="input_submit">
                 GO
             </button>

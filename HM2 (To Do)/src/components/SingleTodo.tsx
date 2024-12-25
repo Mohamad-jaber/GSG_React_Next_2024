@@ -19,14 +19,14 @@ const SingleTodo = ({todo,todos,setTodos}: IProps) => {
         e.preventDefault();
         const newTodo: Todo[] = todos.map((todo) => (todo.id === id ? { ...todo, todo: editTodo } : todo));
         setTodos(newTodo);
-        localStorage.setItem('todo', JSON.stringify(newTodo));
+        localStorage.setItem('todoo', JSON.stringify(newTodo));
         setEdit(false);
     };
 
     const handleDelete = (id: number) => {
         const newTodo: Todo[] = todos.filter((todo) => todo.id !== id);
         setTodos(newTodo);
-        localStorage.setItem('todo', JSON.stringify(newTodo));
+        localStorage.setItem('todoo', JSON.stringify(newTodo));
     };
 
     const handleDone = (id: number) => {
@@ -35,7 +35,7 @@ const SingleTodo = ({todo,todos,setTodos}: IProps) => {
 
         setTodos(newTodo);
 
-        localStorage.setItem('todo', JSON.stringify(newTodo));
+        localStorage.setItem('todoo', JSON.stringify(newTodo));
     };
 
     return (
@@ -54,6 +54,7 @@ const SingleTodo = ({todo,todos,setTodos}: IProps) => {
             ) : (
                 <span className="todos__single--text">{todo.todo}</span>
             )}
+            {todo.isUrgent ? "Urgent" : "Not Urgent"}
             <div>
                 {
                     !todo.isDone &&
