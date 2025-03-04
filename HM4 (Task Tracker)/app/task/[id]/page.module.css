@@ -1,0 +1,113 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  color: #3b82f6;
+  margin-bottom: 1rem;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
+
+.backIcon {
+  height: 1.25rem;
+  width: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+.taskCard {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.imageContainer {
+  position: relative;
+  height: 16rem;
+  width: 100%;
+}
+
+.contentContainer {
+  padding: 1.5rem;
+}
+
+.priorityBadge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.priorityHigh {
+  background-color:  #fee2e2;
+  color: red;
+}
+
+.priorityMedium {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.priorityLow {
+  background-color:  #dbeafe;
+  color:  #1e40af;
+}
+
+.taskTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.statusContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.statusDot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  margin-right: 0.5rem;
+}
+
+.statusCompleted {
+  background-color: #10b981;
+}
+
+.statusPending {
+  background-color: #f59e0b;
+}
+
+.statusText {
+  color: #4b5563;
+}
+
+.statusValue {
+  font-weight: 500;
+}
+
+.metaContainer {
+  border-top: 1px solid  #e5e7eb;
+  padding-top: 1rem;
+}
+
+.metaItem {
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+.metaLabel {
+  font-weight: 500;
+}
